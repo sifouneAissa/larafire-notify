@@ -10,5 +10,6 @@ return [
     'api_domain_name' => 'api.'.env('APP_DOMAIN_NAME', 'localhost'),
     'per_page' => 15,
     'fcm_token_param' => 'registration_id',
-    'guard' => 'api'
+    'guard' => 'api',
+    'sender_id' => env('FCM_SENDER_ID') ?? config('fcm.http.sender_id')
 ];

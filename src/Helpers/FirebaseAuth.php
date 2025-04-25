@@ -83,7 +83,7 @@ class FirebaseAuth
 
         $response = $this->getAccessToken();
         // Your FCM server key
-        $SENDER_ID = config('fcm.http.sender_id');
+        $SENDER_ID = config('larafire-notify.sender_id');
 
         $ACCESS_TOKEN = $response['access_token'];
 
@@ -149,7 +149,7 @@ class FirebaseAuth
             $ACCESS_TOKEN = $accessToken;
         }
         // Your FCM server key
-        $SENDER_ID = config('fcm.http.sender_id');
+        $SENDER_ID = config('larafire-notify.sender_id');
         // Data for the request
         $requestData = [
             'operation' => 'add',
@@ -197,7 +197,7 @@ class FirebaseAuth
             $ACCESS_TOKEN = $accessToken;
         }
         // Your FCM server key
-        $SENDER_ID = config('fcm.http.sender_id');
+        $SENDER_ID = config('larafire-notify.sender_id');
         // Data for the request
         $requestData = [
             'operation' => 'remove',
@@ -240,7 +240,7 @@ class FirebaseAuth
             $accessToken = $response['access_token'];
         }
         // Your FCM server key
-        $projectId = config('fcm.http.sender_id');
+        $projectId = config('larafire-notify.sender_id');
 
 
         $url = "https://fcm.googleapis.com/fcm/notification?notification_key_name=$groupId";
